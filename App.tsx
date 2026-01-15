@@ -45,11 +45,13 @@ const App: React.FC = () => {
                     );
                   }
 
-                  let linkUrl = "#";
-                  if (num === 1) linkUrl = "https://aistudio.google.com/apps/drive/1XsYfWbh-lxocGU4yQqMfdGJSLa23ROgI?showPreview=true&showAssistant=true";
-                  if (num === 3) linkUrl = "https://aistudio.google.com/apps/drive/1XVeDDREKEQiC8vO0o8aMBkiOM7JKaihn?showPreview=true&showAssistant=true";
+                  const links: Record<number, string> = {
+                    1: "https://aistudio.google.com/apps/drive/1XsYfWbh-lxocGU4yQqMfdGJSLa23ROgI?showPreview=true&showAssistant=true",
+                    3: "https://aistudio.google.com/apps/drive/1XVeDDREKEQiC8vO0o8aMBkiOM7JKaihn?showPreview=true&showAssistant=true"
+                  };
 
-                  const isExternal = num === 1 || num === 3;
+                  const linkUrl = links[num] || "#";
+                  const isExternal = !!links[num];
 
                   return (
                     <a
