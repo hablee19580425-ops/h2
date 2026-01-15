@@ -46,8 +46,8 @@ const App: React.FC = () => {
                   }
 
                   const links: Record<number, string> = {
-                    1: "https://aistudio.google.com/apps/drive/1XsYfWbh-lxocGU4yQqMfdGJSLa23ROgI?showPreview=true&showAssistant=true",
-                    3: "https://aistudio.google.com/apps/drive/1XVeDDREKEQiC8vO0o8aMBkiOM7JKaihn?showPreview=true&showAssistant=true"
+                    1: "https://magical-sprite-49185c.netlify.app/",
+                    3: "https://superb-kulfi-539207.netlify.app/"
                   };
 
                   const linkUrl = links[num] || "#";
